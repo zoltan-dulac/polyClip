@@ -1,0 +1,222 @@
+@import "reset.css";
+@import "../fonts/museosans_500_macroman/stylesheet.css";
+
+body {
+	background-color: black;
+	color: white;
+}
+
+.hidden {
+	display: none !important;
+}
+
+#carCarousel-pleaseWait {
+	display: block;
+	width: 250px;
+	font-size: 20px;
+	font-weight: bold;
+	border: solid 3px white;
+	margin: 100px auto 0 auto;
+	padding: 20px 20px 20px 40px;
+	background: url('../images/icons/spinner.gif') 5px 12px no-repeat;
+	font-family: "Ariel", sans-serif;
+}
+
+#header {
+	height: 100px;
+	width: 100%;
+	border: solid 1px white;
+}
+
+#container #nav {
+	text-transform: uppercase;
+	border-bottom: solid 1px white;
+	width: 850px;
+	margin: 0 auto;
+	position: relative;
+	padding-bottom: 20px;
+}
+
+#container #nav #carCarousel-select {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 0.8em;
+}
+
+#container #nav #carCarousel-select ul {
+	display: inline;
+}
+
+#container #nav #carCarousel-select ul li {
+	display: inline-block;
+	background: rgb(51, 51, 51);
+	padding: 5px;
+	border-radius: 2px;
+}
+
+
+#container #nav #carCarousel-select ul li a {
+	text-decoration: none;
+	color: #acacac;
+}
+
+
+div#container {
+	margin-top: 100px !important;
+	width: 960px;
+	height: 400px;
+	position: relative;
+	margin: 0 auto;
+	display: block;
+	
+}
+
+#container #shadow {
+	position: absolute;
+	top: 100px;
+	left: -350px;
+	z-index: 10;
+	opacity: 0.5;
+}
+
+#container ul.carCarousel {
+	position: relative;
+	top: 100px;
+	width: 960px;
+	height: 320px;	
+	margin-top: 50px;
+}
+
+#container ul.faded div.label {
+	visibility: hidden;
+}
+
+#container ul.carCarousel > li {
+	display: none;
+}
+
+/* Font info is here */
+#container ul.carCarousel > li div.label, #nav
+ {
+ 		
+	font-family: "MuseoSans500", "Arial", sans-serif;
+	-moz-transform: scaleX(1.15);
+	-webkit-transform: scaleX(1.15);
+	-ms-transform: scaleX(1.15);
+	-o-transform: scaleX(1.15);
+	transform: scaleX(1.15);
+}
+
+
+/* 
+ * This is a fix to do CSS3-like transforms in IE <= 8. 
+ * M11 has to be equal to the scaleX value.
+ */
+body.ie7 #container ul.carCarousel > li div.label, body.ie7  #nav,
+body.ie8 #container ul.carCarousel > li div.label, body.ie8 #nav{	
+	letter-spacing: .05em;
+	filter: progid:DXImageTransform.Microsoft.Matrix(
+	            M11=1.15,
+	            M12=0,
+	            M21=0,
+	            M22=1,
+	            SizingMethod='auto expand');
+}
+
+/*
+ * 
+ */
+body.ie7 #container #carCarousel-select,
+body.ie8 #container #carCarousel-select {
+	right: -125px !important;
+}
+
+
+#container 	ul.carCarousel > li div.label {
+	position: absolute;
+	width: 100px;
+	border: none; /* solid 1px blue; */
+	text-align: right;
+	left: 120px;
+	bottom: 180px;
+	
+	text-transform: uppercase;
+	font-size: 13px;
+	
+	line-height: 1.2em;
+}
+
+#container ul.carCarousel > li div.details {
+	visibility: hidden;
+	position: absolute;
+	padding-bottom: 50px;
+}
+
+#container ul.carCarousel > li div.details div{
+
+	font-family: "Arial", sans-serif;
+	
+	background: rgb(27, 27, 27);
+	width: 280px;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	
+	left: 0;
+	top: 0;
+}
+
+#container ul.carCarousel > li div.details span.type,
+#container ul.carCarousel > li div.details span.subtype ,
+#container ul.carCarousel > li div.details span.price,
+#container ul.carCarousel > li div.details span.efficiency {
+	text-transform: uppercase;
+}
+
+#container ul.features {
+	
+	font-size: 0.8em;
+	line-height: 1em;
+	list-style-type: disc;
+	margin: 10px 0 10px 30px;
+}
+
+#container ul.features li {
+	margin-bottom: 5px;
+}
+
+#container .moreFeatures {
+	border-radius: 2px;
+	background-color: rgb(255, 167, 2);
+	padding: 3px 10px;
+	font-size: .6em;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+	color: rgb(27, 27, 27);
+	text-shadow: 0 1px 0 white;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+#container ul.carCarousel > li div.label span {
+	display: block;
+}
+
+#container ul.carCarousel > li {
+	position: absolute;
+	z-index: 20;
+}
+
+body.ie9 #container ul.carCarousel > li,
+body.modern #container ul.carCarousel > li {		
+	opacity: 1;
+}
+
+#container ul.carCarousel > li span.subtype {
+	color: rgb(128, 90, 1);
+}
+
+#container ul.carCarousel > li span.price {
+	font-size: 0.9em;
+}
