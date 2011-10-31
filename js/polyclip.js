@@ -3,13 +3,12 @@
  * allows cropping of images using non-rectangular shapes.
  * released under the MIT license.
  * 
- * requires jQuery: http://jquery.com/
- * also requires excanvas for Internet Explorer 6-8: http://excanvas.sourceforge.net/
+ * requires jQuery and the dataset plugin: 	http://www.orangesoda.net/jquery.dataset.html
  * 
- * Usage Example: <div class="cropParent"><img data-polyclip="357, 0; 378, 421; 0, 203" 
- *    src="image.jpg" /></div>
- *    
- * More Information: http://www.useragentman.com/blog/?p=3526
+ * Usage Example: 
+ * <div class="cropParent">
+ *   <img data-polyclip="357, 0; 378, 421; 0, 203" src="photo.jpg" />
+ * </div>
  */
 
 var polyClip = new function () {
@@ -18,18 +17,36 @@ var polyClip = new function () {
 	var ctx;
 	var images;
 	var pathFor = []; // lookup table to see paths.
+	var index = -1;
+	var cache = [];
+	var loaded = 0;
 	
-	me.isIE = (window.G_vmlCanvasManager);
+	me.isOldIE = (window.G_vmlCanvasManager);
 
 	me.init = function () {
 		images = $('img[data-polyclip]');
-		
-		if (!images) {
-			images = $('img[data-polyclip]');
-		}
-		
-		images.each(me.drawShape);
+		images.each(cacheImage);
 	}
+	
+	function cacheImage(index, element) {
+		cache[index] = new Image();
+		var im = cache[index];
+		$(element).attr('data-polyclip-index', index);
+		$(im).bind('load', function () {
+			me.drawShape(index, element);
+		});
+	
+		im.src = element.src;
+	}
+	
+	
+	
+	function drawShapeEvent(e) {
+		index++;
+		
+		me.drawShape(index, e.target);
+	}
+	
 	
 	function supports_canvas() {
 	  return !!document.createElement('canvas').getContext;
@@ -40,9 +57,6 @@ var polyClip = new function () {
 	} 
 	
 	me.drawShape = function (index, element) {
-		
-		
-		
 		var jElement = $(element)
 		var canvas = document.createElement('canvas');
 		canvas.width = element.offsetWidth;
@@ -54,7 +68,7 @@ var polyClip = new function () {
 		pathFor[canvas.id] = [];
 		
 		jElement.replaceWith(canvas);
-		if (me.isIE) {
+		if (me.isOldIE) {
 			G_vmlCanvasManager.initElement(canvas);
 		}
 		
@@ -78,33 +92,67 @@ var polyClip = new function () {
 			
 		}
 		
-	   	if (me.isIE) {
+	   	if (me.isOldIE) {
 	   		/*  
 	   		 * excanvas doesn't implement fill with images, so we must hack the 
 	   		 * resultant VML.
 	   		 */
-	   		ctx.fillStyle = 'rgb(0, 0, 0)';
+	   		ctx.fillStyle = '';
 	   		ctx.fill(); 
 	   		var fill = $('fill', canvas).get(0);
-			fill.color = 'none';
-			fill.src = images[index].src;
+			fill.color = '';
+			fill.src = element.src;
 			fill.type = 'tile';
 			fill.alignShape = false;
 	   	} else {
 			var imageObj = new Image();
 		    imageObj.onload = function(){
 		    	
-	        var pattern = ctx.createPattern(imageObj, "repeat");
-	        
-	        ctx.fillStyle = pattern;
-	        ctx.fill();
+		        var pattern = ctx.createPattern(imageObj, "repeat");
+		        
+		        ctx.fillStyle = pattern;
+		        ctx.fill();
 				
-		 
+				
+				
+				/*
+				 * The if statement below fixes a problem in Chrome 15 (and
+				 * possibly other versions where the image doesn't fill correctly.
+				 * This forces a reload of the image from the server in that 
+				 * case.
+				 */
+				if (!isImageThere(ctx, points)) {
+					if (imageObj.src.indexOf('?chromeError') < 0) {
+						imageObj.src += "?chromeError"; 
+					}
+				}
+				
 		    };
+		 
+		    
 	    	imageObj.src = src;
 		}
 	   	
 	   	
+	}
+	
+	function isImageThere(ctx, points) {
+		var r;
+		var x0 = parseInt(jQuery.trim(points[0]));
+		var y0 = parseInt(jQuery.trim(points[1]));
+		
+		for (var i=-1; i<=1; i++) {
+			for (var j=0; j<=1; j++) {
+				r = ctx.getImageData(x0 +i, y0 +j, 1, 1).data[3];
+				if (r!=0) {
+					return true;
+				}
+			}
+		}
+		
+		return false;
+		
+		
 	}
 	
 	me.findObject = function (e) {
@@ -114,8 +162,6 @@ var polyClip = new function () {
 		if ($(target).hasClass('cropParent')) {
 			return $(target);
 		}
-		
-		
 		
 		for (var i in pathFor) {
 			if (pathFor.hasOwnProperty(i)) {
@@ -183,15 +229,14 @@ var polyClip = new function () {
 		     return(inside);
 		}
 	}
-	
-	
-	
 }
 
+// Minimizes FOUC in newer browsers. If older browsers that don't understand
+// attribute selectors, add a class of polyClip to the images you are clipping.
+document.write('<style type="text/css">img[data-polyclip], img.polyClip { visibility: hidden; }</style>')
 
-
-if (polyClip.isIE) {
-	$(window).bind('load', polyClip.init)
+if (polyClip.isOldIE) {
+	$(window).bind('load', polyClip.init);
 } else {
 	$(document).ready(polyClip.init);
 }
