@@ -1,63 +1,45 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
+    <head>
+        <meta name="generator" content="HTML Tidy, see www.w3.org">
+        <meta http-equiv="Content-Type" content=
+        "text/html; charset=iso-8859-1">
 
-  <!-- This is an example of polyClip.js in action -->
-  <title>cropPath Example</title>
-  <meta charset="utf-8" />
+        <title>polyClip.js</title>
+    </head>
 
-  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
-       Remove this if you use the .htaccess -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta http-equiv="imagetoolbar" content="no" />
-  
-  
-  <meta name="description" content="" />
-  <meta name="author" content="Zoltan Hawryluk" />
-   	
-  <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <body>
+        <h1>polyClip.js</h1>
 
+		<p>Allows cross-browser, non-rectangular cropping and masking 
+		of images. Can also be used in animationed image masking.  Works in
+		all modern browsers (Firefox, Chrome, Safari, IE9+ and Opera) as well as
+		older Internet Explorer (7.0 and higher).</p>
+		
+        <ul>
+            <li><a href=
+            "example.html">Simple example of an image clipped into
+            an irregular polygon.</a></li>
 
-  <meta property="og:title" content="cropPath Example" />
-  <meta property="og:description" content="This is an example of how the cropPath.js library can take HTML images and crop them into non-rectangular polygons." />
-  <meta property="og:image" content="" />
+            <li><a href="conflicting-plaid.html">An animation of a clipping
+            	area clipped using transforms with CSS3 syntax 
+            	(e.g. skew(), rotate(), etc.)</a></li>
 
+            <li><a href="modsquad.html">Animating of the clipping area
+            	by changing the clipping co-ordinates directly.
+            	</a></li>
 
-  
-  
-  <link rel="stylesheet" href="/css/style.css" />
-  
-  <script src="js/jquery-1.6.2.min.js"></script>
-  
-  <!--[if lt IE 9 ]>
-	<script src="js/excanvas/excanvas.compiled.js"></script>
-	<script src="js/remysharp.com/html5.js"></script>
-  <![endif]-->
-  
-  <script src="js/polyclip-p.js"></script>
-  
+            <li><a href="polyclip-animation-example-1.html">Interactive example
+            	that changes the clipping area according to where the user is
+            	hovering the mouse (desktop), touching the screen (iOS and
+            	maybe others) or clicking the screen (every other device)</li>
 
-  
-  
-  
-  
-</head>
+            <li><a href="polyclip-animation-example-2.html">A simple idea for 
+            	a two-image photo gallery.</a></li>
 
-<!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
-<!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
-<!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
-<!--[if IE 9 ]>    <body class="ie9 modern"> <![endif]-->
-<!--[if (gt IE 9)]><body class="modern"> <![endif]-->
-<!--[if !IE]><!--> <body class="notIE modern"><!--<![endif]-->
-  
+        </ul>
 
-    <div id="mainContent">
-    	<div class="clipParent">
-	      	<img src="images/crop.jpg" data-polyclip="487, 4, 741, 239, 19, 239, 43, 195"  />
-	      </div>
-    </div>
-
-    
-</body>
+    </body>
 </html>
+

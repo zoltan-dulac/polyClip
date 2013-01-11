@@ -1,3 +1,28 @@
-polyClip.js is A JavaScript library that allows cropping of 
-images using non-rectangular shapes. Full documentation is
-available at http://www.useragentman.com/blog/?p=3526
+polyClip 2.1 by Zoltan Hawryluk
+
+Allows cross-browser, non-rectangular cropping and masking 
+of images. Can also be used in animationed image masking.  Works in
+all modern browsers (Firefox, Chrome, Safari and Opera) as well as
+Internet Explorer 7.0 and higher.
+
+More info is available on these blog posts:
+
+- Clipping JPEG Images Into Non-Rectangular Polygons Using polyClip.js
+  http://www.useragentman.com/blog/?p=3526
+
+- Cross-Browser Animated Image Masking (Even in IE) Using polyClip.js
+  http://www.useragentman.com/blog/?p=5621
+ 
+Released under the MIT license.
+
+@requires jQuery http://jquery.org
+
+For animations, it is recommended to use Silk.js if you want GPU accelerated
+animations (included with the polyClip package available at:
+	
+https://github.com/zoltan-dulac/polyClip  
+
+For animations that require transformations (i.e. scaling, rotations, etc),
+it is necessary to use sylvester.js (also included with the polyClip package).
+The most up-to-date version of sylvester is available at
+http://sylvester.jcoglan.com/ 
