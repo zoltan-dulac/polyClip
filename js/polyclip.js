@@ -295,14 +295,16 @@ var polyClip = new function () {
 				
 				
 				
-				for (var i=0; i<points.length; i+=2) {
-					V = $V([parseInt(jQuery.trim(points[i])), parseInt(jQuery.trim(points[i+1])), 1]);
-					
-					Vprime = pushTransformCoords(transformMatrix, V, Vbegin, Vend, scaledCoords);
-					
-				}
+			for (var i=0; i<points.length; i+=2) {
+				V = $V([parseInt(jQuery.trim(points[i])), parseInt(jQuery.trim(points[i+1])), 1]);
 				
-			return scaledCoords.join(',');
+				Vprime = pushTransformCoords(transformMatrix, V, Vbegin, Vend, scaledCoords);
+				debug(transformMatrix.e(1,1))
+			}
+				
+			var r = scaledCoords.join(',');
+			
+			return r;
 		}
 	}
 	
@@ -339,7 +341,7 @@ var polyClip = new function () {
 		
 		if (transform) {
 			if (window.$M) {
-				debug(transform);
+				debug('transform: ' + transform);
 				
 				if (typeof(transform) == 'string') {
 					transform = MatrixGenerator.getTransformationMatrix(transform);
@@ -806,7 +808,7 @@ var polyClip = new function () {
 				var unit = angleStr.match(reUnit);
 				
 				
-				if (angleStr.trim() == '0') {
+				if (jQuery.trim(angleStr) == '0') {
 					num = 0;
 					unit = 'rad';
 				}
@@ -838,8 +840,11 @@ var polyClip = new function () {
 			}
 			
 			me.rotate = function(angleStr){
+				console.log('xx')
 				var num = getRadianScalar(angleStr);
+				console.log('x')
 				return Matrix.RotationZ(num);
+				
 			}
 			
 			me.scale = function(sx, sy){
@@ -919,7 +924,7 @@ var polyClip = new function () {
 			}
 			
 			me.getTransformationMatrix = function(transformString, doThrowIfError){
-    
+    			debug('transformString is ' + transformString)
 		        var transforms = transformString.match(reTransformListSplitter);
 				
 				/*
@@ -937,7 +942,7 @@ var polyClip = new function () {
 				
 				
 		        var resultantMatrix = MatrixGenerator.identity;
-		        
+		        debug('num of transforms ' + transforms.length)
 		        for (var j = 0; j < transforms.length; j++) {
 		        
 		            var transform = transforms[j];
@@ -946,6 +951,7 @@ var polyClip = new function () {
 		            
 		            
 		            try {
+		            	debug('looking up : ' + transform)
 		                var matrix = eval('MatrixGenerator.' + transform);
 						
 						
