@@ -385,7 +385,7 @@ var polyClip = new function () {
 			id = element.id?element.id:'polyClip' + index,
 			r = $element,
 			imageWidth, imageHeight,
-			useSVG = me.useSVGGlobally || element.getAttribute('data-polyclip-clippreference')=='SVG' || element.nodeName.toUpperCase() =='SVG',
+			useSVG = (me.useSVGGlobally || element.getAttribute('data-polyclip-clippreference')=='SVG' || element.nodeName.toUpperCase() =='SVG') && canUseSVG,
 			//dataset = $element.dataset(),
 			svgString;
 		sb = [];
@@ -840,9 +840,7 @@ var polyClip = new function () {
 			}
 			
 			me.rotate = function(angleStr){
-				console.log('xx')
 				var num = getRadianScalar(angleStr);
-				console.log('x')
 				return Matrix.RotationZ(num);
 				
 			}
