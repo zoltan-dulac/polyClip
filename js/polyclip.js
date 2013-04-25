@@ -84,7 +84,7 @@ var polyClip = new function () {
 			showDebugMessages = configNode.getAttribute('data-polyclip-showdebugmessages') || false;
 			canUseSVG = !me.isOldIE && !isIOS && forcepointerevents == 'true';
 			
-			if (clippreference == 'SVG' && canUseSVG) { //&& !supportsHTMLPointerEvents()) {
+			if (clippreference == 'SVG' && canUseSVG && !supportsHTMLPointerEvents()) {
 				me.useSVGGlobally = true;
 			}
 			
