@@ -12,6 +12,10 @@ More info is available on these blog posts:
 
 - Cross-Browser Animated Image Masking (Even in IE) Using polyClip.js
   http://www.useragentman.com/blog/?p=5621
+
+- Clicking Through Clipped Images Using CSS Pointer Events,
+  SVG Paths and VML
+  http://www.useragentman.com/blog/?p=5914
  
 Released under the MIT license.
 
