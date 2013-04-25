@@ -7,6 +7,10 @@
  * 
  * More info is available on these blog posts:
  * 
+ * - Clicking Through Clipped Images Using CSS Pointer Events, 
+ *   SVG Paths and VML
+ *   http://www.useragentman.com/blog/?p=5914
+ * 
  * - Clipping JPEG Images Into Non-Rectangular Polygons Using polyClip.js
  *   http://www.useragentman.com/blog/?p=3526
  * 
