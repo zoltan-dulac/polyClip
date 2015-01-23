@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- This is an example of polyClip.js in action -->
+  <title>cropPath Example</title>
+  <meta charset="utf-8" />
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="imagetoolbar" content="no" />
+  
+  
+  <meta name="description" content="" />
+  <meta name="author" content="Zoltan Hawryluk" />
+   	
+  <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+
+  <meta property="og:title" content="cropPath Example" />
+  <meta property="og:description" content="This is an example of how the cropPath.js library can take HTML images and crop them into non-rectangular polygons." />
+  <meta property="og:image" content="" />
+
+
+  
+  
+  <link rel="stylesheet" href="/css/style.css" />
+  
+ 
+  
+  
+  
+</head>
+
+<!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <body class="ie9 modern"> <![endif]-->
+<!--[if (gt IE 9)]><body class="modern"> <![endif]-->
+<!--[if !IE]><!--> <body class="notIE modern"><!--<![endif]-->
+  
+
+    <div id="mainContent">
+    	<div class="clipParent">
+	      	<img src="images/crop.jpg" data-polyclip="487, 4, 741, 239, 19, 239, 43, 195"  />
+	      </div>
+    </div>
+
+  <script src="js/libs/jquery-1.8.3.min.js"></script>
+  
+  <!--[if lt IE 9 ]>
+	<script src="js/libs/excanvas.compiled.js"></script>
+	<script src="js/libs/html5.js"></script>
+  <![endif]-->
+  
+  <script src="js/polyclip-p.js" data-polyclip-clippreference="SVG" data-polyclip-forcepointerevents='true'></script>
+  
+
+  
+</body>
+</html>

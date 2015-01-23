@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- This is an example of polyClip.js in action -->
+  <title>polyClip.js animation example 2 by Zoltan Hawryluk</title>
+  <meta charset="utf-8" />
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="imagetoolbar" content="no" />
+  
+  
+  <meta name="description" content="polyClip.js animation example 1 by Zoltan Hawryluk" />
+  <meta name="author" content="Zoltan Hawryluk" />
+   	
+
+  <meta property="og:title" content="polyClip.js animation example 1 by Zoltan Hawryluk" />
+  <meta property="og:description" content="polyClip.js animation example 1 by Zoltan Hawryluk" />
+  <meta property="og:image" content="" />
+
+
+  
+  <link rel="stylesheet" href="http://www.useragentman.com/shared/css/useragentmanExample.css" />
+  <link rel="stylesheet" href="css/polyclip-animation-example2.css" />
+  
+ 
+  
+  
+  
+</head>
+
+<!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <body class="ie9 modern"> <![endif]-->
+<!--[if (gt IE 9)]><body class="modern"> <![endif]-->
+<!--[if !IE]><!--> <body class="notIE modern"><!--<![endif]-->
+  
+	<div id="exampleBlurb">
+		<p>
+			This is an example of using polyClip.js to animate the clipping path of an image.  
+			Click on the "Next" button to see another clipped image mask over the first.
+			
+				<a href="http://www.useragentman.com/blog/?p=5621">Back to User Agent Man article</a>
+		</p>
+	</div>
+
+    <div id="mainContent">
+    	
+    	<div id="example2" class="clipParent">
+    		
+    		
+    		<img id="zoltan2012" src="images/zoltan-2012.jpg" alt="Me, 2012" />
+    		<img id="zoltan2000" src="images/zoltan-circa-2000.jpg" alt="Me at Doug's Wedding, circa 2000"  
+    			data-polyclip="-1000,-1000, 0,-1000, 0,347, -1000,347"  
+    			data-polyclip-transformorigin="0, 347"
+    			
+    			/>
+    		
+    		<button id="next">Next</button>
+	    </div>
+	    
+    </div>
+
+	<script src="js/libs/jquery-1.8.3.min.js"></script>
+	
+	<!-- Needed for easing formulas to finesse the animation -->
+	<script src="js/libs/jquery.easing.1.3.js"></script>
+	
+	<!-- Canvas and HTML5 polyfills Needed for IE 8 and under -->
+	<!--[if lt IE 9 ]>
+		<script src="js/libs/excanvas.compiled.js"></script>
+		<script src="js/libs/html5.js"></script>
+	<![endif]-->
+	
+	<!-- Needed to do transforms -->
+	<script src="js/libs/sylvester.js"></script>
+	
+	<!-- Needed for Silk.js -->
+	<script src="js/libs/jshashtable-2.1.js"></script>
+	
+	<!-- Needed for smooth animation -->
+	<script src="js/Silk.js"></script>
+	 
+	<script src="js/polyclip.js"></script>
+	<script src="js/examples/polyclip-animation-example2.js"></script>
+
+
+
+  
+</body>
+</html>

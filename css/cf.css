@@ -1,0 +1,84 @@
+@import "reset.css";
+@import "../font/TopSecret/stylesheet.css";
+
+body {
+	overflow-x: hidden;
+}
+
+body {
+	font-family: "TopSecretWithoutLines-Bold", "Impact", sans-serif;
+	color: white;
+	text-shadow: 3px 3px 0px black;
+	background: url('../images/background-jpeg.jpg') center bottom no-repeat black;
+	margin-top: 10px;
+}
+
+body.ie7, body.ie8 {
+	background: black !important;
+}
+
+.clipParent {
+	position:relative;
+	width: 800px;
+	height: 800px;
+	margin: 0 auto;
+	border: solid 3px white;
+	
+	-ms-transform-origin: 50% 0;
+	-webkit-transform-origin: 50% 0;
+	-o-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+}
+
+.clipParent img[data-polyclip] {
+	visibility: hidden;
+}
+
+.clipParent [data-polyclip] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+#main-copy {
+	position: absolute;
+	z-index: 10;
+	font-size: 50px;
+	text-align: center;
+	top: 310px;
+	opacity: 0;
+	box-sizing: border-box;
+	padding: 20px;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+
+
+#main-copy h1 {
+	font-size: 1.5em;
+}
+
+#main-copy a, #main-copy a:visited {
+	color: #ffffcc;
+}
+
+#main-copy p {
+	font-size: .5em;
+	line-height: 1.3em;
+}
+
+#credit {
+	font-size: 0.4em;
+	text-align: right;
+	margin-top: 80px;
+}
+#name {
+	position: absolute;
+	font-size: 320px;
+	width: 800px;
+	
+	z-index: 30;
+	text-align: center;
+	top: 250px;
+}

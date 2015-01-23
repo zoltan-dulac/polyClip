@@ -1,0 +1,9 @@
+
+@font-face {
+	font-family: 'MarshMallowWorld';
+	src: url('MarshMallowWorld.eot?') format('eot'), 
+	     url('MarshMallowWorld.woff') format('woff'), 
+	     url('MarshMallowWorld.ttf')  format('truetype'),
+	     url('MarshMallowWorld.svg#MarshMallowWorld') format('svg');
+}
+ 

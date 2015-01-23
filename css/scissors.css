@@ -1,0 +1,128 @@
+body {
+	font-family: "Helvetica", "Arial", sans-serif;
+	margin-top: 100px;
+}
+
+.box {
+	position: relative;
+	height: 300px;
+	width: 100%;
+	font-size: 27px;
+	
+}
+
+.box div {
+	position: absolute;
+	z-index: 3;
+}
+
+.box .clipParent {
+	top: 0;
+	left: 0;
+	position: relative;
+	z-index: 1;
+}
+
+#explanation1 {
+	top: 30px;
+	left: 140px;
+	-moz-transform: perspective(1px) rotate(-12deg);
+	-webkit-transform: perspective(1px) rotate(-12deg);
+	-o-transform:  rotate(-12deg);
+	-ms-transform:  rotate(-12deg);
+	transform: perspective(1px) rotate(-12deg);
+}
+
+body.ie6 #explanation1,
+body.ie7 #explanation1,
+body.ie8 #explanation1 {
+	background: white;
+    filter: progid:DXImageTransform.Microsoft.Chroma(
+   				Color="#ffffff"),
+			progid:DXImageTransform.Microsoft.Matrix(
+	            M11=0.9781476007338058,
+	            M12=0.2079116908177585,
+	            M21=-0.2079116908177585,
+	            M22=0.9781476007338058,
+	            SizingMethod='auto expand');
+
+
+   /*
+    * To make the transform-origin be the middle of
+    * the object.    Note: These numbers
+    * are approximations.  For more accurate results,
+    * use Internet Explorer with this tool.
+    */
+   margin-left: -8px; 
+   margin-top: -65px;
+   padding-top: 3px;
+   padding-bottom: 10px;
+}
+
+#explanation2 {
+	top: 140px;
+	left: 180px;
+	
+	-moz-transform: perspective(1px) rotate(-9deg);
+	-webkit-transform: perspective(1px) rotate(-9deg);
+	-o-transform: rotate(-9deg);
+	-ms-transform: rotate(-9deg);
+	transform: perspective(1px) rotate(-9deg);
+}
+
+body.ie6 #explanation2,
+body.ie7 #explanation2,
+body.ie8 #explanation2 {
+   background: white;
+
+   filter: progid:DXImageTransform.Microsoft.Chroma(
+   				Color="#ffffff"),
+   		   progid:DXImageTransform.Microsoft.Matrix(
+	            M11=0.9876883405951378,
+	            M12=0.15643446504023062,
+	            M21=-0.15643446504023062,
+	            M22=0.9876883405951378,
+	            SizingMethod='auto expand');
+
+
+   /*
+    * To make the transform-origin be the middle of
+    * the object.    Note: These numbers
+    * are approximations.  For more accurate results,
+    * use Internet Explorer with this tool.
+    */
+   margin-left: -7px; 
+   margin-top: -54px;
+    padding-top: 3px;
+	padding-bottom: 10px;
+	
+}
+
+#explanation3 {
+	top: 200px;
+	left: 380px;
+	width: 400px;
+	height: 68px;
+	border: solid 1px #666666;
+	padding: 10px;
+	background: white;
+	box-shadow: 5px 5px 0px #cccccc;
+	-moz-box-shadow: 5px 5px 0px #cccccc;
+	-webkit-box-shadow: 5px 5px 0px #cccccc;
+}
+
+body.ie6 #explanation3,
+body.ie7 #explanation3,
+body.ie8 #explanation3 {
+	zoom: 1;
+   filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=5, OffY=5, Color=#cccccc);
+}
+
+#explanation3 p {
+    font-size: 14px !important;
+    line-height: 22px !important;
+}
+
+.entry img {
+	border: none;
+}

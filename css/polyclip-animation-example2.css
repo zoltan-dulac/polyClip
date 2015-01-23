@@ -1,0 +1,24 @@
+#example2 {
+	position: relative;
+	
+	width: 340px;
+	height: 347px;
+	margin: 0 auto 20px auto	;
+	text-align: center;
+}
+
+img[data-polyclip] {
+	visibility: hidden;
+}
+
+[data-polyclip], #example2 img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+button {
+	position: relative;
+	top: 300px;
+	z-index: 20;
+}

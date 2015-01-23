@@ -1,0 +1,18 @@
+#example1{
+	position: relative;
+	
+	width: 426px;
+	height: 273px;
+	margin: 0 auto;
+}
+
+img[data-polyclip] {
+	visibility: hidden;
+}
+
+[data-polyclip], #example1 img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+

@@ -1,0 +1,16 @@
+
+@font-face {
+	font-family: 'Latinia-Normal';
+	src: url('Latinia.eot?') format('eot'), 
+	     url('Latinia.woff') format('woff'), 
+	     url('Latinia.ttf')  format('truetype'),
+	     url('Latinia.svg#Latinia') format('svg');
+}
+
+@font-face {
+	font-family: 'LatiniaBlack';
+	src: url('LatiniaBlack.eot?') format('eot'), 
+	     url('LatiniaBlack.woff') format('woff'), 
+	     url('LatiniaBlack.ttf')  format('truetype'),
+	     url('LatiniaBlack.svg#LatiniaBlack') format('svg');
+}

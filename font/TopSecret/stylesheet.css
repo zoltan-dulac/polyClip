@@ -1,0 +1,16 @@
+
+@font-face {
+	font-family: 'TopSecret-Bold';
+	src: url('TopSecret.eot?') format('eot'), 
+	     url('TopSecret.woff') format('woff'), 
+	     url('TopSecret.ttf')  format('truetype'),
+	     url('TopSecret.svg#TopSecret-Bold') format('svg');
+}
+
+@font-face {
+	font-family: 'TopSecretWithoutLines-Bold';
+	src: url('TopSecretNoLines.eot?') format('eot'), 
+	     url('TopSecretNoLines.woff') format('woff'), 
+	     url('TopSecretNoLines.ttf')  format('truetype'),
+	     url('TopSecretNoLines.svg#TopSecretWithoutLines-Bold') format('svg');
+}

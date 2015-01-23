@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- This is an example of polyClip.js in action -->
+  <title>Conflicting Plaid Live! December 20th</title>
+  <meta charset="utf-8" />
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+         Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="imagetoolbar" content="no" />
+  
+  
+  <meta name="description" content="polyClip.js animation example 1 by Zoltan Hawryluk" />
+  <meta name="author" content="Zoltan Hawryluk" />
+    	
+
+  <meta property="og:title" content="polyClip.js animation example 1 by Zoltan Hawryluk" />
+  <meta property="og:description" content="polyClip.js animation example 1 by Zoltan Hawryluk" />
+  <meta property="og:image" content="" />
+
+
+  
+  <link rel="stylesheet" href="http://www.useragentman.com/shared/css/useragentmanExample.css" />
+  <link rel="stylesheet" href="css/polyclip-animation-example1.css" />
+  
+ 
+  
+  
+  
+</head>
+
+<!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
+<!--[if IE 7 ]>     <body class="ie7"> <![endif]-->
+<!--[if IE 8 ]>     <body class="ie8"> <![endif]-->
+<!--[if IE 9 ]>     <body class="ie9 modern"> <![endif]-->
+<!--[if (gt IE 9)]><body class="modern"> <![endif]-->
+<!--[if !IE]><!--> <body class="notIE modern"><!--<![endif]-->
+  
+     <div id="exampleBlurb">
+		<p>
+			This is an example of using polyClip.js to animate the clipping path of an image.  
+			Move your mouse over the photo below and you'll see a clipped color photo masking
+			over the black and white one.
+			
+				<a href="http://www.useragentman.com/blog/?p=5621">Back to User Agent Man article</a>
+		</p>
+	</div>
+
+     <div id="mainContent">
+     	
+     	<div id="example1" class="clipParent">
+     		
+     		
+     		<img id="dad1960" src="images/dad-circa-1960.jpg" alt="Dad circa 1960" />
+     		<img id="dad2012" src="images/dad-2012.jpg" alt="Dad 2012"  
+     			data-polyclip="0,0, 100,0, 50,273, -50,273"
+     			 />
+     		
+     		
+     		
+     		
+     		<div id="name"></div>
+	     </div>
+	     
+     </div>
+
+	<script src="js/libs/jquery-1.8.3.min.js"></script>
+	
+	<!-- Canvas and HTML5 polyfills Needed for IE 8 and under -->
+	<!--[if lt IE 9 ]>
+		<script src="js/libs/excanvas.compiled.js"></script>
+		<script src="js/libs/html5.js"></script>
+	<![endif]-->
+	
+	<script src="js/libs/sylvester.js"></script>
+	
+	<script src="js/polyclip.js"></script>
+    <script src="js/examples/polyclip-animation-example1.js"></script>
+
+  
+</body>
+</html>

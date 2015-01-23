@@ -1,0 +1,235 @@
+@import "../font/Latinia/stylesheet.css";
+
+/* LatiniaBlack font by Manfried Klein http://manfred-klein.ina-mar.com/ */
+body {
+	font-family: "LatiniaBlack", "Impact", serif;
+	font-weight: normal;
+	margin: 0;
+}
+
+#textContainer {
+	position: absolute;
+	top: 0;
+	z-index: 40;
+}
+
+
+ #title {
+	position: absolute;
+	font-size: 80px;
+	z-index: 20;
+	text-transform: uppercase;
+	top: -490px;
+	color: yellow;
+	width: 729px;
+	
+}
+	
+html.modern #title, html.ieMobile #title {
+	
+	text-shadow: 10px 10px 0 black;
+		/* 10px 0 10px white,
+		-10px 0 10px white,
+		0 10px 10px white,
+		0 -10px 10px white; */
+	-moz-transform: translate(-20px, -50px) rotate(-30deg);
+	-webkit-transform: translate(-20px, -50px) rotate(-30deg);
+	-o-transform: translate(-20px, -50px) rotate(-30deg);
+	-ms-transform: translate(-20px, -50px) rotate(-30deg);
+	transform: translate(-20px, -50px) rotate(-30deg);
+	margin-top: 0;
+}
+
+
+html.ie9down #title {
+	
+	/* These two filters do the text-shadow and transform in IE */
+	filter:  progid:DXImageTransform.Microsoft.DropShadow(OffX=10, OffY=10, Color=black),
+	         progid:DXImageTransform.Microsoft.Matrix(
+	            M11=0.866025403784439,
+	            M12=0.4999999999999993,
+	            M21=-0.4999999999999993,
+	            M22=0.866025403784439,
+	            SizingMethod='auto expand');
+	
+    
+    /* This adjusts the transform of the Matrix filter to match the CSS3 one */
+    margin-top: -200px;
+}
+
+#title div {
+	zoom: 1;
+}
+
+.polyClip-clipped {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 1;
+	
+}
+
+
+#clarence {
+	z-index: 9;
+}
+#michael {
+	z-index: 10;
+}
+
+#peggy {
+	z-index: 8;
+}
+
+#support {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#finalText {
+    color: #FFFFCC;
+    font-size: 37px;
+    left: 10px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 550px;
+    z-index: 20;
+    text-align: center;
+    width: 729px;
+    
+    
+}
+
+html.modern #finalText,
+html.ieMobile #finalText {
+    opacity: 0;
+}
+
+
+
+html.modern #finalText h1 {
+	text-shadow: 10px 10px 0 black, -1px -1px 0 black, -1px 0 0 black, 0 1px 0 black;
+    
+}
+
+html.ie9down #finalText h1,
+html.ie9down #finalText p {
+	zoom: 1;
+}
+
+html.ie9down #finalText h1 {
+	
+	filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=10, OffY=10, Color=black),
+			progid:DXImageTransform.Microsoft.DropShadow(OffX=-1, OffY=-1, Color=black),
+			progid:DXImageTransform.Microsoft.DropShadow(OffX=-1, OffY=0, Color=black),
+			progid:DXImageTransform.Microsoft.DropShadow(OffX=0, OffY=1, Color=black),
+			progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+
+}
+
+html.modern #finalText p {
+	text-shadow: 6px 6px 0 black, -1px -1px 0 black, -1px 0 0 black, 0 1px 0 black;
+    
+}
+
+html.ie9down #finalText p {
+	
+	filter:
+			progid:DXImageTransform.Microsoft.DropShadow(OffX=6, OffY=6, Color=black),
+			 progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+	position: relative;
+	
+	left: -2px;
+	top: -2px;
+}
+
+
+#finalText h1 {
+	
+    text-transform: uppercase;
+	font-size: 95px;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+
+#finalText p {
+	margin: -45px 0 0 0;
+}
+
+#finalText img {
+    margin-right: 10px;
+    position: relative;
+    top: 39px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+
+#frame {
+	position: relative;
+	margin: 0 auto;
+	width: 726px;
+	height: 939px;
+	overflow: hidden;
+	-moz-transform-origin: 50% 0%;
+	-webkit-transform-origin: 50% 0%;
+	-o-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+	top: -10px;
+	zoom: 1;
+	z-index: 100;
+}
+
+
+/* Table styles */
+
+
+table {
+	font-family: "Arial", "Helvetica", sans-serif;
+	border: solid 5px black;
+	border-collapse: collapse;
+	float: left;
+	display: none;
+	font-style:  normal !important;
+}
+
+table th, table td {
+	border: solid 1px black;
+	padding: 5px;
+}
+
+table th[rowspan] {
+	width: 50px;
+	overflow: none;
+	vertical-align: middle;
+	font-weight: bold;
+	padding-top: 0px;
+	
+	-moz-transform: rotate(90deg) scale(-1, -1);
+	-webkit-transform: rotate(90deg) scale(-1, -1);
+	-o-transform: rotate(90deg) scale(-1, -1);
+	-ms-transform: rotate(90deg) scale(-1, -1);
+	
+}
+
+
+table td {
+	white-space: nowrap;
+}
+
+table td.more {
+	font-weight: bold;
+}
+
+pre {
+	display: none;
+}
+
+/*
+body.showStats pre {
+	display: block;
+}
+
+body.showStats table {
+	display: table;
+} */

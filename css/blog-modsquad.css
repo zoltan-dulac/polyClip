@@ -1,0 +1,389 @@
+@import "../font/Latinia/stylesheet.css";
+
+/* LatiniaBlack font by Manfried Klein http://manfred-klein.ina-mar.com/ */
+#frame, #frame h1 {
+	font-family: "LatiniaBlack", "Impact", serif;
+	font-weight: normal;
+	margin: 0;
+}
+
+
+
+ #title {
+	position: absolute;
+	font-size: 40px;
+	z-index: 20;
+	text-transform: uppercase;
+	top: -490px;
+	color: yellow;
+	width: 100%;
+	
+}
+	
+	
+#startDemo {
+	position: absolute;
+	font-size: 40px;
+	z-index: 20;
+	text-transform: uppercase;
+	color: yellow;
+	width: 100%;
+	text-align: center;
+	top: 395px;
+}
+
+
+
+#startDemo, #startAgain {
+	cursor: pointer;
+	-moz-transition: color 0.25s linear, opacity 0.25s linear;
+	-webkit-transition: color 0.25s linear, opacity 0.25s linear;
+}
+
+#startDemo:hover, #startAgain:hover {
+	
+	color: hsl(240, 50%, 70%);
+}
+
+
+body.modern #startDemo	 {
+	text-shadow: 5px 5px 0 black, -1px -1px 0 black, -1px 0 0 black, 0 1px 0 black;
+    
+}
+
+body.ie9down #startDemo {
+	zoom: 1;
+	height: 50px;
+	padding-top: 6px;
+	filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=5, OffY=5, Color=black),
+			progid:DXImageTransform.Microsoft.DropShadow(OffX=-1, OffY=-1, Color=black),
+			progid:DXImageTransform.Microsoft.DropShadow(OffX=-1, OffY=0, Color=black),
+			progid:DXImageTransform.Microsoft.DropShadow(OffX=0, OffY=1, Color=black);
+
+}
+
+body.ie7 #startDemo, body.ie7 #title {
+	padding: 6px;
+}
+
+
+body.modern #title {
+	
+	text-shadow: 5px 5px 0 black;
+		/* 10px 0 10px white,
+		-10px 0 10px white,
+		0 10px 10px white,
+		0 -10px 10px white; */
+	-moz-transform: translate(-10px, -5px) rotate(-30deg);
+	-webkit-transform: translate(-10px, -5px) rotate(-30deg);
+	-o-transform: translate(-10px, -5px) rotate(-30deg);
+	-ms-transform: translate(-10px, -5px) rotate(-30deg);
+	transform: translate(-10px, -5px) rotate(-30deg);
+}
+
+
+body.ie9down #title {
+	height: 50px;
+	padding-top: 6px;
+	background: #808080;
+	
+	/* These two filters do the text-shadow and transform in IE */
+	filter:  progid:DXImageTransform.Microsoft.Chroma(Color=#808080),
+			 progid:DXImageTransform.Microsoft.DropShadow(OffX=5, OffY=5, Color=black),
+	         progid:DXImageTransform.Microsoft.Matrix(
+	            M11=0.866025403784439,
+	            M12=0.4999999999999993,
+	            M21=-0.4999999999999993,
+	            M22=0.866025403784439,
+	            SizingMethod='auto expand');
+	
+    
+    /* This adjusts the transform of the Matrix filter to match the CSS3 one */
+    margin-top: -100px;
+    margin-left: 10px;
+}
+
+#title div {
+	zoom: 1;
+}
+
+.polyClip-clipped {
+	position: absolute;
+	
+	z-index: 1;
+	
+}
+
+#frame .polyClip-clipped {
+	top: 10px;
+	left: 10px;
+}
+
+
+#clarence {
+	z-index: 9;
+}
+#michael {
+	z-index: 10;
+}
+
+#peggy {
+	z-index: 8;
+}
+
+#support {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#finalText {
+    color: #FFFFCC;
+    font-size: 37px;
+    left: 10px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 275px;
+    z-index: 20;
+    text-align: center;
+    width: 100%;
+    
+}
+
+body.modern #finalText {
+    opacity: 0;
+}
+
+
+
+body.modern #finalText h1 {
+	text-shadow: 5px 5px 0 black, -1px -1px 0 black, -1px 0 0 black, 0 1px 0 black;
+    
+}
+
+body.ie9down #finalText h1,
+body.ie9down #finalText p {
+	zoom: 1;
+}
+
+body.ie9down #finalText h1 {
+	background-color: #808080;
+	filter: progid:DXImageTransform.Microsoft.Chroma(Color=#808080),
+			progid:DXImageTransform.Microsoft.DropShadow(OffX=5, OffY=5, Color=black),
+			progid:DXImageTransform.Microsoft.DropShadow(OffX=-1, OffY=-1, Color=black),
+			progid:DXImageTransform.Microsoft.DropShadow(OffX=-1, OffY=0, Color=black),
+			progid:DXImageTransform.Microsoft.DropShadow(OffX=0, OffY=1, Color=black),
+			progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+
+}
+
+body.ie7 #finalText h1 {
+	margin-left: 20px;
+}
+
+body.modern #finalText p {
+	text-shadow: 3px 3px 0 black, -1px -1px 0 black, -1px 0 0 black, 0 1px 0 black;
+    
+}
+
+body.ie9down #finalText p {
+	
+	filter:
+			progid:DXImageTransform.Microsoft.DropShadow(OffX=3, OffY=3, Color=black),
+			 progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+	position: relative;
+	
+	left: -2px;
+	top: -2px;
+}
+
+
+#finalText h1 {
+	
+    text-transform: uppercase;
+	font-size: 48px;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+
+#finalText p.time {
+	margin: 27px 0 0 0;
+	height: 50px;
+	font-size: 16px !important;
+}
+
+#finalText p#startAgain {
+    font-size: 14px !important;
+    margin-top: 9px;
+    text-align: center;
+}
+
+body.ie9down #finalText p#startAgain {
+    margin-top: 0px;
+}
+
+#finalText img {
+    border: medium none;
+    left: 26px;
+    margin-right: 0;
+    position: relative;
+    top: -18px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+
+body.ie7 #finalText img {
+	left: 0px;
+}
+
+body.ie7 #finalText h1 {
+	position: relative;
+	left: -20px;
+}
+body.ie7 #finalText p {
+	position: relative;
+	left: 26px;
+	
+}
+
+body.ie7 #finalText p.time {
+	top: 20px;
+}
+
+#frame {
+	position: relative;
+	margin: 0 auto;
+	width: 355px;
+	height: 459px;
+	overflow: hidden;
+	-moz-transform-origin: 50% 0%;
+	-webkit-transform-origin: 50% 0%;
+	-o-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+	top: -10px;
+	zoom: 1;
+	z-index: 100;
+}
+
+#frameContainer {
+	position: relative;
+	overflow: hidden;
+}
+
+
+/* Table styles */
+
+
+table {
+    border-collapse: collapse;
+    font-family: "Arial","Helvetica",sans-serif;
+    margin: 0 auto 20px;
+    width: 90%;
+}
+
+
+table#support-table td {
+	text-align: left;
+	padding: 10px;
+	
+}
+
+table th, table td {
+	border: solid 1px black;
+	padding: 5px;
+	font-style: normal;
+	vertical-align:  middle;
+	
+}
+
+table td.more {
+	font-weight: bold !important;
+	background: #ffeeee;
+}
+
+table td.most {
+	color:black;
+	font-weight: bold;
+	background: #ccffcc;
+}
+
+table th[rowspan] {
+	width: 25px;
+	overflow: hidden;
+	vertical-align: middle;
+	font-weight: bold;
+	padding-top: 0px;
+	line-height: 1em;
+}
+
+
+table th.small {
+	height: 60px;
+}
+
+table th.small span {
+	margin-top: 0px;
+	
+}
+
+
+body.ie8down table th[rowspan] span{
+	padding-top: 10px;
+}
+
+body.ie8down table th.win7mobile span {
+	padding-top: 5px;
+	
+}
+
+
+table th[rowspan] span {
+	position: absolute;
+	display: block;
+	width: 75px;
+	
+	text-align: center;
+	-moz-transform: rotate(90deg) scale(-1, -1) translate(10px, -25px);
+	-webkit-transform: rotate(90deg) scale(-1, -1) translate(10px, -25px);
+	-o-transform: rotate(90deg) scale(-1, -1) translate(10px, -25px);
+	-ms-transform: rotate(90deg) scale(-1, -1) translate(10px, -25px);
+	background: transparent;
+}
+
+body.ie8down table th[rowspan] span {
+	zoom: 1;
+	background: #EBE5DE;
+	filter: progid:DXImageTransform.Microsoft.Chroma(color=#ebe5de), progid:DXImageTransform.Microsoft.Matrix(
+            M11=1.8369701987210297e-16,
+            M12=1,
+            M21=-1,
+            M22=1.8369701987210297e-16,
+            SizingMethod='auto expand');
+    margin-top: -35px;
+}
+
+
+
+pre {
+	display: none;
+}
+
+body.showStats pre {
+	display: block;
+}
+
+body.showStats table {
+	display: table;
+}
+
+
+table thead th {
+	position: static !important;
+}
+
+video {
+	display: block;
+	margin: 0 auto;
+	border solid 1px black;
+}
+
